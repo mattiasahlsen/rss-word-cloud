@@ -16,7 +16,6 @@ export function getWordsMatrix(words: IWord[]): IWord[][] {
     const positions = getPositions(spaceFromCenter, len)
     const words = sortedWords.splice(0, positions.length)
 
-    console.log('spaceFromCenter', spaceFromCenter, 'positions', positions)
     positions.forEach((position, index) => {
       const [rowIndex, columnIndex] = position
 
