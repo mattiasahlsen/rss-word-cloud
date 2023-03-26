@@ -6,7 +6,7 @@ import {
 } from '@/constants/regex'
 
 export function stringToWords(str: string): string[] {
-  return str.split(SEPARATOR)
+  return str.split(SEPARATOR).filter((word) => word.length > 0)
 }
 
 export function sanitizeString(str: string): string {

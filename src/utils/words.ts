@@ -17,7 +17,7 @@ export function wordsFrequencyMapToWords(
     }))
     .sort((a, b) => b.frequency - a.frequency)
 
-  const maxFrequency = wordsWithFrequency[0].frequency
+  const maxFrequency = wordsWithFrequency[0]?.frequency ?? 0
   return wordsWithFrequency.map((wordWithFrequency) => ({
     word: wordWithFrequency.word,
     weight: wordWithFrequency.frequency / maxFrequency,
